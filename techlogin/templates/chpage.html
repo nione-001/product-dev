@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="box">
+        <h1>NIONE</h1>
+        <h2>CHANGE PASSWORD</h2>
+        <form method="post" action="change">
+            {% csrf_token %}
+            <input name="email" value="{{email}}"><br>
+            <input name="passw" type="password" placeholder="password">
+            <button class="btn" type="submit">SUBMIT</button>
+        </form>
+    </div>    
+</body>
+</html>

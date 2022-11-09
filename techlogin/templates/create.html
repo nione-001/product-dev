@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    
+
+</head>
+<body>
+    <div class="box">
+        <h1>NIONE</h1>
+        <h2>CREATE ACCOUNT</h2>
+        <form method="post" action="ctom">
+            {% csrf_token %}
+            <input type="email" placeholder="E-MAIL" name="email"><br>
+            <input type="text" placeholder="NAME" name="name"><br>
+            <input type="password" placeholder="PASSWORD" name="passw"><br>
+            <button class="btn" type="submit">SUBMIT</button><br>
+        </form>
+        <a href="/">login?</a>
+    </div>
+</body>
+</html>
